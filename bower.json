@@ -1,0 +1,11 @@
+{
+  "name": "vue-backend-generator",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Boelroy"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true
+}
