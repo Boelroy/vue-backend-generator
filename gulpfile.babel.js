@@ -22,15 +22,19 @@ let config = {
         loaders: ['babel?presets[]=es2015']
       }
     ]
-  }
+  },
+  plugins:[
+    new webpack.HotModuleReplacementPlugin()
+  ]
 };
 
 
 gulp.task('dev', function() {
-  config.entry.app.unshift('webpack-dev-server/client?http://localhost:8080/');
+  config.entry.app.unshift('webpack-dev-server/client?http://localhost:8080/', "webpack/hot/dev-server");
   var compiler = webpack(config);
   var server = new WebpackDevServer(compiler, {
     hot: true,
+    inline: true,
     contentBase: './app/',
     publicPath: '/scripts/'
   });
