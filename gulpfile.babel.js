@@ -20,6 +20,10 @@ let config = {
       {
         test: /\.js?$/,
         loaders: ['babel?presets[]=es2015']
+      },
+      {
+        test: /\.scss?$/,
+        loaders: ['style','css','sass']
       }
     ]
   },

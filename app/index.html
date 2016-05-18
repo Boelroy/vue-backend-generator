@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+<navbar></navbar>
+<div id="app">
+  <input type="text" v-model="newTodo" v-on:keyup.enter="addTodo">
+  <ul>
+    <li v-for="todo in todos">
+      <span>{{todo.text}}</span>
+      <button v-on:click="removeTodo($index)">x</button>
+    </li>
+  </ul>
+</div>
+<my-component ></my-component>
+<a v-link="{path:'/foo'}">Go Foo</a>
+<a v-link="{path:'/bar'}">Go bar</a>
+
+<router-view></router-view>
+
+<script type="text/javascript" src="/scripts/main.js"></script>
+</body>
+</html>
